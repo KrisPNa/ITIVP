@@ -29,24 +29,20 @@
             overflow: hidden;
         }
 
-        /* header h1 {
-            margin: 0;
-        } */
-
         /* Стили для навигации */
         .main-nav {
-        display: flex;
-      }
+            display: flex;
+        }
 
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-      }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
 
-      nav a:hover {
-        text-decoration: underline;
-      }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
         .container {
             padding: 20px;
@@ -75,34 +71,34 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Стили для секции категорий (CSS Grid) - ИЗМЕНЕНО */
+        /* Стили для секции категорий (CSS Grid) */
         .categories {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Уменьшаем минимальную ширину */
-            grid-gap: 15px; /* Уменьшаем отступы */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 15px;
             padding: 20px;
         }
 
         .category {
             text-align: center;
-            padding: 10px; /* Уменьшаем отступы */
-            border: 2px solid #4f5fed; /* Добавляем обводку */
-            border-radius: 25px; /* Скругляем углы */
+            padding: 10px;
+            border: 2px solid #4f5fed;
+            border-radius: 25px;
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease; /* Для плавного эффекта */
+            transition: all 0.3s ease;
         }
 
         .category a {
             text-decoration: none;
             color: #333;
             display: block;
-            font-size: 0.9em; /* Уменьшаем размер шрифта */
+            font-size: 0.9em;
         }
 
         .category a:hover {
             color: #fff;
-            background-color: #4f5fed; /* Меняем цвет фона при наведении */
+            background-color: #4f5fed;
         }
 
         footer {
@@ -122,42 +118,61 @@
             font-size: 1.5em;
         }
 
+        /* Стиль для блока с ссылкой на новости */
+        .news-link {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .news-link a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4f5fed;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .news-link a:hover {
+            background-color: #3a4bd1;
+        }
 
         /* Медиа-запрос для мобильных устройств */
         @media (max-width: 768px) {
-
-            /* Показываем кнопку бургер-меню */
+            /* Бургер-меню */
             .burger-menu-button {
-          display: block;
-          cursor: pointer;
-          z-index: 11;
-        }
+                display: block;
+                cursor: pointer;
+                z-index: 11;
+            }
 
-        .main-nav {
-          display: none;
-          position: fixed;
-          top: 0;
-          right: 0;
-          width: 200px;
-          height: 100%;
-          background-color: #4f5fed;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-          z-index: 10;
-        }
+            .main-nav {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 200px;
+                height: 100%;
+                background-color: #4f5fed;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+                z-index: 10;
+            }
 
-        .main-nav.nav-active {
-          display: flex;
-        }
+            .main-nav.nav-active {
+                display: flex;
+            }
 
-        .main-nav a {
-          margin-bottom: 20px;
-          font-size: 1.2em;
-        }
+            .main-nav a {
+                margin-bottom: 20px;
+                font-size: 1.2em;
+            }
 
-            /* Адаптация секции .home на мобильных устройствах */
+            /* Адаптация секций */
             .home h2 {
                 font-size: 2em;
             }
@@ -166,7 +181,6 @@
                 font-size: 1em;
             }
 
-            /* Адаптация секции категорий на мобильных устройствах */
             .categories {
                 grid-template-columns: 1fr;
                 padding: 10px;
@@ -176,7 +190,6 @@
                 padding: 10px;
             }
         }
-        
     </style>
 </head>
 
@@ -190,9 +203,11 @@
         <!-- Навигация -->
         <nav class="main-nav">
             <a href="index.html">Главная</a>
+            <a href="news.html">Новости</a>
             <a href="contacts.html">Контакты</a>
             <a href="about.html">О нас</a>
             <a href="collection.html">Коллекция</a>
+            <a href="weather.html">Погода</a>
         </nav>
     </header>
 
@@ -201,6 +216,11 @@
             <h2>Добро пожаловать в наш интернет-магазин!</h2>
             <p>Здесь вы найдёте одежду на любой вкус и стиль!</p>
             <img src="img/back/back2.jpg" alt="Добро пожаловать" class="center-image" />
+        </div>
+
+        <!-- Ссылка на страницу с новостями -->
+        <div class="news-link">
+            <a href="news.html">Читать все новости магазина →</a>
         </div>
 
         <!-- Секция категорий -->
@@ -226,17 +246,26 @@
         </div>
     </div>
 
-    <footer>
-        <p style="text-align: left; padding-left: 20px">
-            &copy; 2025 Магазин одежды. Все права защищены.</p>
-    </footer>
-       <script>
+   <footer style="display: flex; justify-content: space-between; align-items: center; padding: 20px; color: white;">
+      <p style="margin: 0;">&copy; 2025 Магазин одежды. Все права защищены.</p>
+      <nav style="display: flex; gap: 20px;">
+          <a href="index.html" style="color: white; text-decoration: none;">Главная</a>
+          <a href="news.html" style="color: white; text-decoration: none;">Новости</a>
+          <a href="contacts.html" style="color: white; text-decoration: none;">Контакты</a>
+          <a href="about.html" style="color: white; text-decoration: none;">О нас</a>
+          <a href="collection.html" style="color: white; text-decoration: none;">Коллекция</a>
+          <a href="weather.html" style="color: white; text-decoration: none;">Погода</a>
+      </nav>
+  </footer>
+
+    <script>
+        // Бургер-меню
         const burgerButton = document.querySelector('.burger-menu-button');
         const nav = document.querySelector('.main-nav');
   
         burgerButton.addEventListener('click', () => {
-          nav.classList.toggle('nav-active');
+            nav.classList.toggle('nav-active');
         });
-      </script>
-    </body>
-  </html>
+    </script>
+</body>
+</html>
